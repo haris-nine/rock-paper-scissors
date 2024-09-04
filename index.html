@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+            function getComputerChoice() {
+                function getRandomInt(max) {
+                    return Math.floor(Math.random() * max);
+                    } 
+                    let randomInt = getRandomInt(3)
+                    let computerChoice
+                    switch (randomInt) {
+                    case 0:
+                    computerChoice = "Rock.";
+                    break;
+                    case 1:
+                    computerChoice = "Paper.";
+                    break;
+                    case 2:
+                    computerChoice = "Scissors.";
+                    break;
+                    } 
+                let computerPicks = "The computer picked" + " " + computerChoice 
+                console.log(computerPicks)
+                    return computerChoice
+            }        
+            function getHumanChoice() {
+                    let choicePrompt = prompt("What would you like to pick?", "nothing").toLowerCase()
+                    let humanChoice
+                    switch (choicePrompt) {
+                    case "rock":
+                    humanChoice = "Rock.";
+                    break;
+                    case "paper":
+                    humanChoice = "Paper.";
+                    break;
+                    case "scissors":
+                    humanChoice = "Scissors.";
+                    break;
+                    default:
+                    humanChoice = "WHAT!?"
+                    break;
+                    }
+                let humanPicks = "You picked" + " " + humanChoice
+                console.log(humanPicks)
+                return humanChoice
+            }
+            let humanScore = 0
+            let computerScore = 0
+        function playGame() {
+            function playRound(humanChoice, computerChoice) {
+
+                let winner
+                if (humanChoice === computerChoice) {
+                    winner = "You tied!";
+                }   else if (humanChoice === "Rock." && computerChoice === "Paper.") {
+                    winner = "Paper beats Rock! Computer won!"; ++computerScore;
+                }   else if (humanChoice === "Paper." && computerChoice === "Rock.") {
+                    winner = "Paper beats Rock! You won!"; ++humanScore;
+                }   else if (humanChoice === "Rock." && computerChoice === "Scissors.") {
+                    winner = "Rock beats Scissors! You won!"; ++humanScore;
+                }   else if (humanChoice === "Scissors." && computerChoice === "Rock.") {
+                    winner = "Rock beats Scissors! Computer won!"; ++computerScore;
+                }   else if (humanChoice === "Paper." && computerChoice === "Scissors.") {
+                    winner = "Scissors beats Paper! You won!"; ++humanScore;
+                }   else if (humanChoice === "Scissors." && computerChoice === "Paper.") {
+                    winner = "Paper beats Rock! Computer won!"; ++computerScore;
+                }   else {
+                    winner = "Something went wrong!"
+                }
+                console.log(winner)
+                console.log(humanScore + " vs " + computerScore)
+            }
+
+            const humanSelection = getHumanChoice();
+            const computerSelection = getComputerChoice();
+            let bigWinner
+            playRound(humanSelection, computerSelection);
+        }
+
+        for (let i = 0; i < 5; i++) {
+        playGame();
+        }
+    </script>
+    <title>Rock Paper & Scissors</title>
+</head>
+<body>
+    
+</body>
+</html>
