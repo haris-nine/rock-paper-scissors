@@ -1,0 +1,91 @@
+/* *	{
+    outline: 1px solid red;
+} */
+
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+.section {
+	background-color: #1F2937;
+	color: white;
+	display: flex;
+	justify-content: space-between;
+	padding: 80px 120px 120px 80px;
+	gap: 16px;
+	
+}
+
+.logo {
+	padding: 16px;
+	font-size: 24px;
+	color: #F9FaF8;
+	background-color: #1F2937;
+	font-family: 'Times New Roman', 'Roboto';
+	padding-left: 80px;
+}
+
+.heading {
+	font-weight: 800;
+	font-size: 48px;
+	margin-bottom: 5px;
+}
+
+.scores {
+	font-size: 18px;
+	color: #E5E7EB;
+	display:flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+
+.buttons {
+	display: flex;
+	justify-content: center;
+	gap: 80px;
+	margin: 30px;
+}
+
+button {
+	border: none;
+	font-size: 22px;
+	background-color: #3882f6;
+	color: #E5E7EB;
+	padding: 5px 20px;
+	border-radius: 8px;
+	transition-duration: 0.4s;
+}
+
+button:hover {
+	background-color: #E5E7EB;
+	color: #3882f6;
+}
+
+.affinity {
+	max-width: 50%;
+	height: auto;
+	object-fit: contain;
+}
+
+#Reset {
+	display: flex;
+	margin-left: auto;
+	margin-right: 30px;
+}
+
+button img {
+	width: 80px;
+}
+
+p {
+	margin: 3px;
+}
+
+#res {
+	background-color: #1F2937;
+	padding: 10px;
+}
