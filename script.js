@@ -17,9 +17,8 @@
 
 		document.querySelector("#cscore").innerText = "Current Score = " + humanScore + " vs " + computerScore
 
-		document.querySelector("#winna").innerText = "Winner: " + winner
-
-
+		document.querySelector("#winna").innerText = "Current Winner: " + winner
+		gameWinner()
 	}
 
 
@@ -67,6 +66,15 @@
 			++humanScore;
 		} else {
 			winner = "Something went wrong!"
+		}
+	}
+	
+	function gameWinner () {
+		if (humanScore > 4) {
+				document.querySelector('#game-winner').textContent = "You have won the game!"
+		}
+		else if (computerScore > 4) {
+							document.querySelector('#game-winner').textContent = "You have lost the game!"
 		}
 	}
 
