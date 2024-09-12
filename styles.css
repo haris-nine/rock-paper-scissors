@@ -88,4 +88,8 @@ p {
 #res {
 	background-color: #1F2937;
 	padding: 10px;
+	position: fixed;
+    bottom: 0;
+    width: 100%;
+}
 }
