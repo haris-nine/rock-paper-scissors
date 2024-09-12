@@ -14,7 +14,7 @@ body {
 	color: white;
 	display: flex;
 	justify-content: space-between;
-	padding: 80px 120px 120px 80px;
+	padding: 80px 120px 80px 80px;
 	gap: 16px;
 	
 }
